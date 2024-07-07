@@ -31,7 +31,7 @@ app.use(session({
     store: sessionStore
 }));
 
-// Initialize database and tables, then start the server
+// Initialize database and tables then start the server
 createDatabaseAndTables().then(() => {
     db.connect((err) => {
         if (err) throw err;
