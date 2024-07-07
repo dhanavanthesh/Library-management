@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
     });
 });
 
+
 // Render form to borrow a book
 router.get('/borrow/:book_id', (req, res) => {
     const book_id = req.params.book_id;
