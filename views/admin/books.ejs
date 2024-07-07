@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Books</title>
+</head>
+<body>
+    <h1>Manage Books</h1>
+    <a href="/admin/books/add">Add New Books</a>
+    <a href="/admin/books/borrow">Borrowed Books</a> <!-- Link to borrow book form -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% books.forEach(book => { %>
+                <tr>
+                    <td><%= book.id %></td>
+                    <td><%= book.title %></td>
+                    <td><%= book.author %></td>
+                    <td><%= book.price %></td>
+                    <td><%= book.status %></td>
+                    <td><%= book.quantity %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

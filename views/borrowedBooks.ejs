@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Borrowed Books</title>
+</head>
+<body>
+    <h1>Borrowed Books</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Borrow Date</th>
+                <th>Return Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% books.forEach(book => { %>
+                <tr>
+                    <td><%= book.title %></td>
+                    <td><%= book.borrow_date %></td>
+                    <td><%= book.return_date %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

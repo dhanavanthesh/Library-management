@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Borrow Book</title>
+</head>
+<body>
+    <h1>Borrow Book</h1>
+    <form action="/books/borrow/<%= book_id %>" method="POST">
+        <div>
+            <label for="borrow_date">Borrow Date:</label>
+            <input type="date" id="borrow_date" name="borrow_date" value="<%= currentDate %>" required>
+            <!-- JavaScript to set the current date -->
+            <script>
+                const today = new Date().toISOString().split('T')[0];
+                document.getElementById('borrow_date').defaultValue = today;
+            </script>
+        </div>
+        <div>
+            <label for="return_date">Return Date:</label>
+            <input type="date" id="return_date" name="return_date" required>
+        </div>
+        <button type="submit">Borrow Book</button>
+    </form>
+</body>
+</html>

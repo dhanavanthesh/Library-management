@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Member Registration</title>
+</head>
+<body>
+    <h1>Register as a Member</h1>
+    <form action="/users/register" method="post">
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required>
+        <br>
+        <label for="sub_name">Sub Name:</label>
+        <input type="text" id="sub_name" name="sub_name">
+        <br>
+        <label for="college_name">College Name:</label>
+        <input type="text" id="college_name" name="college_name" required>
+        <br>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

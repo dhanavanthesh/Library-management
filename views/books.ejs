@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Available Books</title>
+</head>
+<body>
+    <h1>Available Books</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Status</th>
+                <!-- <th>Quantity</th> -->
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% books.forEach(book => { %>
+                <tr>
+                    <td><%= book.id %></td>
+                    <td><%= book.title %></td>
+                    <td><%= book.author %></td>
+                    <td><%= book.price %></td>
+                    <td><%= book.status %></td>
+                    <!-- <td><%= book.quantity %></td> -->
+                    <td>
+                        <a href="/books/borrow/<%= book.id %>">Borrow</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

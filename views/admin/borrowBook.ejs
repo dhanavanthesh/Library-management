@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Borrow Book</title>
+</head>
+<body>
+    <h1>Borrow Book</h1>
+    <form action="/admin/books/borrow" method="POST">
+        <div>
+            <label for="book_id">Book ID:</label>
+            <input type="number" id="book_id" name="book_id" required>
+        </div>
+        <div>
+            <label for="member_id">Member ID:</label>
+            <input type="number" id="member_id" name="member_id" required>
+        </div>
+        <div>
+            <label for="borrow_date">Borrow Date:</label>
+            <input type="date" id="borrow_date" name="borrow_date" required>
+        </div>
+        <div>
+            <label for="return_date">Return Date:</label>
+            <input type="date" id="return_date" name="return_date" required>
+        </div>
+        <button type="submit">Borrow Book</button>
+    </form>
+</body>
+</html>

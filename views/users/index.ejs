@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Members</title>
+</head>
+<body>
+    <h1>Members List</h1>
+    <ul>
+        <% members.forEach(function(member) { %>
+            <li><%= member.first_name %> <%= member.last_name %></li>
+        <% }); %>
+    </ul>
+</body>
+</html>

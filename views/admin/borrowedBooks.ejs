@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Borrowed Books</title>
+</head>
+<body>
+    <h1>Borrowed Books</h1>
+    <a href="/admin/books">Back to Books</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Book Title</th>
+                <th>Member Name</th>
+                <th>Borrow Date</th>
+                <th>Return Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% borrowedBooks.forEach(book => { %>
+                <tr>
+                    <td><%= book.id %></td>
+                    <td><%= book.title %></td>
+                    <td><%= book.full_name %></td>
+                    <td><%= new Date(book.borrow_date).toLocaleDateString() %></td>
+                    <td><%= book.return_date ? new Date(book.return_date).toLocaleDateString() : 'Not Returned' %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
